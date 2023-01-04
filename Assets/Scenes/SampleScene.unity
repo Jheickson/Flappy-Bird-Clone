@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 582577147}
   - component: {fileID: 582577146}
   - component: {fileID: 582577145}
+  - component: {fileID: 582577150}
   m_Layer: 3
   m_Name: Character
   m_TagString: Untagged
@@ -370,6 +371,7 @@ MonoBehaviour:
   flapStrength: 10
   logic: {fileID: 0}
   birdIsAlive: 1
+  animator: {fileID: 582577150}
 --- !u!58 &582577146
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -383,9 +385,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04}
   serializedVersion: 2
-  m_Radius: 0.075
+  m_Radius: 0.06
 --- !u!50 &582577147
 Rigidbody2D:
   serializedVersion: 4
@@ -398,7 +400,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2827433
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
@@ -448,7 +450,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -571589956, guid: eb71a98eef87a114c89cbce4ea2c42eb, type: 3}
+  m_Sprite: {fileID: -1252032292, guid: eb71a98eef87a114c89cbce4ea2c42eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -474,6 +476,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &582577150
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582577144}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff5cd16d23c06944f9424945d12ac5aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &667310779
 GameObject:
   m_ObjectHideFlags: 0
