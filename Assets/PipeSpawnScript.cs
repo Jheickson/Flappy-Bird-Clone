@@ -6,9 +6,9 @@ public class PipeSpawnScript : MonoBehaviour
 {
 
     public GameObject Pipes;
-    public float spawnRate = 3;
-    private float timer = 0;
-    public float heightOffset = 3;
+    public float PipeSpawnRate = 5;
+    private float PipeTimer = 0;
+    public float PipeHeightOffset = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +22,14 @@ public class PipeSpawnScript : MonoBehaviour
     void Update()
     {
 
-        if (timer < spawnRate) {
+        if (PipeTimer < PipeSpawnRate) {
 
-            timer += Time.deltaTime;
+            PipeTimer += Time.deltaTime;
 
         } else {
 
             spawnPipe();
-            timer = 0;
+            PipeTimer = 0;
 
         }
 
@@ -39,8 +39,8 @@ public class PipeSpawnScript : MonoBehaviour
     void spawnPipe() {
 
         Debug.Log("Pipe Created");
-        float lowestPoint = transform.position.y - heightOffset;
-        float highestPoint = transform.position.y + heightOffset;
+        float lowestPoint = transform.position.y - PipeHeightOffset;
+        float highestPoint = transform.position.y + PipeHeightOffset;
 
         Instantiate(Pipes, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
 
