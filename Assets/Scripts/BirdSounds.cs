@@ -35,6 +35,7 @@ public class BirdSounds : MonoBehaviour
 
         AudioClip clip = flaps[UnityEngine.Random.Range(0, flaps.Length)];
         myAudioSource.PlayOneShot(clip);
+        Debug.Log("Flap sound played");
 
     }
 
@@ -43,6 +44,7 @@ public class BirdSounds : MonoBehaviour
 
         AudioClip clip = dies[UnityEngine.Random.Range(0, dies.Length)];
         myAudioSource.PlayOneShot(clip);
+        Debug.Log("Death sound played");
 
     }
 }
