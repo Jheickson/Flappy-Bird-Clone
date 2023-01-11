@@ -44,9 +44,15 @@ public class CharacterScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (birdIsAlive)
+        {
 
-        logic.gameOver();
-        birdIsAlive = false;
+            logic.gameOver();
+            birdIsAlive = false;
+            sounds.Dies();
+
+        }
+        else Debug.Log("Bird is already dead");
 
     }
 
