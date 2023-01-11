@@ -11,6 +11,7 @@ public class CharacterScript : MonoBehaviour
     public bool birdIsAlive = true;
     public Animator animator;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +28,13 @@ public class CharacterScript : MonoBehaviour
 
             myRigidBody.velocity = Vector2.up * flapStrength;
 
+
         }
 
         animator.SetFloat("Vertical Speed", myRigidBody.velocity.y);
         animator.SetBool("Alive", birdIsAlive);
 
+        
 
     }
 
