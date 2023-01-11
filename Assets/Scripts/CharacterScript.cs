@@ -11,6 +11,8 @@ public class CharacterScript : MonoBehaviour
     public bool birdIsAlive = true;
     public Animator animator;
 
+    private BirdSounds sounds;
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class CharacterScript : MonoBehaviour
 
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManagerScript>();
 
+        sounds = GetComponent<BirdSounds>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,8 @@ public class CharacterScript : MonoBehaviour
 
             myRigidBody.velocity = Vector2.up * flapStrength;
 
-
+            sounds.Flaps();
+            
         }
 
         animator.SetFloat("Vertical Speed", myRigidBody.velocity.y);
