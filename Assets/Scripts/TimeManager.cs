@@ -19,7 +19,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
 
-        timeMult = (float)logic.getScore() / (float)20;
+        timeMult = (float)logic.getScore() / (float)25;
         //timeMult = (float)2/10;
 
         Time.timeScale = modifiedScale + timeMult;

@@ -12,10 +12,18 @@ public class LogicManagerScript : MonoBehaviour
     public GameObject gameOverScreen;
 
     [ContextMenu("Increase Score")]
+
+    private void Start()
+    {
+
+    }
+
     public void addScore(int scoreToAdd) {
+
 
         playerScore += scoreToAdd;
         scoreText.text = playerScore.ToString();
+               
 
     }
 

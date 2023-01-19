@@ -56,4 +56,9 @@ public class CharacterScript : MonoBehaviour
 
     }
 
+    public bool isBirdAlive()
+    {
+        return birdIsAlive;
+    }
+
 }
