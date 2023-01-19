@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LogicManagerScript : MonoBehaviour
 {
 
-    public int playerScore;
+    [SerializeField] public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
 
@@ -28,6 +28,13 @@ public class LogicManagerScript : MonoBehaviour
     public void gameOver() {
 
         gameOverScreen.SetActive(true);
+
+    }
+
+    public int getScore()
+    {
+
+        return playerScore;
 
     }
 

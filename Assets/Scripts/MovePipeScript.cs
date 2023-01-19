@@ -18,8 +18,8 @@ public class MovePipeScript : MonoBehaviour
     void Update()
     {
 
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
-        
+        moveObject(2);
+
         if (transform.position.x < deleteZone) {
 
             Debug.Log("Pipe Deleted");
@@ -28,4 +28,12 @@ public class MovePipeScript : MonoBehaviour
         }
 
     }
+
+    public void moveObject(float multiplier)
+    {
+
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime * multiplier;
+
+    }
+
 }

@@ -18,7 +18,7 @@ public class CloudMoveScript : MonoBehaviour
     void Update()
     {
 
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        moveObject(2);
         
         if (transform.position.x < deleteZone) {
 
@@ -28,4 +28,12 @@ public class CloudMoveScript : MonoBehaviour
         }
 
     }
+
+    public void moveObject(float multiplier)
+    {
+
+        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime * multiplier;
+
+    }
+
 }
